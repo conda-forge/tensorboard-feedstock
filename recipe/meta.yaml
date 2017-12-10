@@ -1,5 +1,5 @@
 {% set version = "0.4.0rc3" %}
-{% set build_number = "0" %}
+{% set build_number = "1" %}
 
 package:
   name: tensorboard
@@ -66,6 +66,7 @@ requirements:
 test:
   imports:
     - tensorboard
+  # N.B. CLI tests are in the tensorflow package recipe (to avoid having an explicit circular dependency)
   # To be super-strict, we should run the original tests with bazel against the newly created package
 
 about:
