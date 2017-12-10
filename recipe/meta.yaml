@@ -64,12 +64,9 @@ requirements:
     #
 
 test:
-  requires:
-    - tensorflow >=1.4.0,<1.5
   imports:
     - tensorboard
-  commands:
-    - tensorboard --help
+  # N.B. CLI tests are in the tensorflow package recipe (to avoid having an explicit circular dependency)
   # To be super-strict, we should run the original tests with bazel against the newly created package
 
 about:
