@@ -64,8 +64,12 @@ requirements:
     #
 
 test:
+  requires:
+    - tensorflow >=1.4.0,<1.5
   imports:
     - tensorboard
+  commands:
+    - tensorboard --help
   # To be super-strict, we should run the original tests with bazel against the newly created package
 
 about:
