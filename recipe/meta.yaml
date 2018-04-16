@@ -15,7 +15,7 @@ build:
 
   number: {{ build_number }}
   script:
-    - pip install --no-deps tensorflow-tensorboard=={{ version }}
+    - pip install --no-deps tensorboard=={{ version }}
 
 requirements:
   # See: https://pypi.python.org/pypi/tensorflow-tensorboard/0.4.0rc3
