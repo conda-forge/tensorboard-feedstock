@@ -14,14 +14,16 @@ Summary: TensorFlow's Visualization Toolkit
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/tensorboard-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tensorboard-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/tensorboard-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/tensorboard-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/tensorboard-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/tensorboard-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/tensorboard-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/tensorboard-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/tensorboard-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/tensorboard-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/tensorboard-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/tensorboard-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tensorboard/badges/version.svg)](https://anaconda.org/conda-forge/tensorboard)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tensorboard/badges/downloads.svg)](https://anaconda.org/conda-forge/tensorboard)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-tensorboard-green.svg)](https://anaconda.org/conda-forge/tensorboard) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/tensorboard.svg)](https://anaconda.org/conda-forge/tensorboard) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/tensorboard.svg)](https://anaconda.org/conda-forge/tensorboard) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/tensorboard.svg)](https://anaconda.org/conda-forge/tensorboard) |
 
 Installing tensorboard
 ======================
