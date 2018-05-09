@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 {% set build_number = "0" %}
 
 package:
@@ -18,20 +18,20 @@ build:
     - pip install --no-deps tensorboard=={{ version }}
 
 requirements:
-  # See: https://pypi.python.org/pypi/tensorflow-tensorboard/0.4.0rc3
+  # See: https://pypi.org/project/tensorboard
   build:
     - python
     - pip
   run:
     - python
-    - futures >=3.1.1  # [py27]
-    - bleach ==1.5.0
-    - html5lib ==0.9999999
-    - markdown >=2.6.8
     - numpy >=1.12.0
-    - protobuf >=3.4.0
     - six >=1.10.0
+    - protobuf >=3.4.0
     - werkzeug >=0.11.10
+    - html5lib ==0.9999999 # identical to 1.0b8
+    - markdown >=2.6.8
+    - bleach ==1.5.0
+    - futures >=3.1.1   # [py27]
 
     #
     # After splitting out of tensorflow, the tensorboard pypi package is problematic:
@@ -77,3 +77,4 @@ extra:
   recipe-maintainers:
     - sdvillal
     - danielfrg
+    - gilbertfrancois
