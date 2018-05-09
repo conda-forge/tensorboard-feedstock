@@ -16,6 +16,8 @@ build:
   number: {{ build_number }}
   script:
     - pip install --no-deps tensorboard=={{ version }}
+  entry_points:
+    - tensorboard = tensorboard.main:run_main
 
 requirements:
   # See: https://pypi.org/project/tensorboard
