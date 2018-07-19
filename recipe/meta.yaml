@@ -5,17 +5,18 @@ package:
   name: tensorboard
   version: {{ version }}
 
+{% set py_major = "py2" %}  # [py2k]
+{% set py_major = "py3" %}  # [py3k]
+{% set wheel_fn = "tensorboard-" + version + "-" + py_major + "-none-any.whl" %}
+source:
+  url: https://pypi.io/packages/{{ py_major }}/t/tensorboard/{{ wheel_fn }}
+  sha256: 97661706fbe857c372405e0f5bd7c3db2197b5e70cec88f6924b726fde65c2c1  # [py2k]
+  sha256: 42a04637a636e16054b065907c81396b83a9702948ecd14218f19dc5cf85de98  # [py3k]
+
 build:
-
-  # There are two wheels (py2, py3) in pypi.
-  # (for newer versions, recheck by diffing both py2 and py3 wheels).
-  # At the moment they are equivalent, as only their metadata changes.
-  # But we cannot create a noarch package: dependencies are different
-  # noarch: python
-
   number: {{ build_number }}
   script:
-    - pip install --no-deps tensorboard=={{ version }}
+    - python -m pip install --no-deps --ignore-installed ./{{ wheel_fn }}
   entry_points:
     - tensorboard = tensorboard.main:run_main
 
