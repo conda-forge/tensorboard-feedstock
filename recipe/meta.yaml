@@ -14,7 +14,8 @@ source:
 build:
   number: {{ build_number }}
   script:
-    - python -m pip install --no-deps --ignore-installed ./tensorboard-*.whl
+    - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py2-none-any.whl  # [py2k]
+    - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl  # [py3k]
   entry_points:
     - tensorboard = tensorboard.main:run_main
 
