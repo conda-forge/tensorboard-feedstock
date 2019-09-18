@@ -20,12 +20,12 @@ build:
     - tensorboard = tensorboard.main:run_main
 
 requirements:
-  # See: https://pypi.org/project/tensorboard
-  build:
+  host:
     - python
     - pip
   run:
     - python
+    - wheel >=0.26
     - numpy >=1.12.0
     - six >=1.10.0
     - protobuf >=3.4.0
