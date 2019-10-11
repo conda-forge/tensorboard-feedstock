@@ -1,4 +1,4 @@
-{% set version = "1.14.0" %}
+{% set version = "2.0.0" %}
 {% set build_number = 0 %}
 
 package:
@@ -6,15 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/py2/t/tensorboard/tensorboard-{{ version }}-py2-none-any.whl  # [py2k]
-  sha256: c35ba681a52d4922be6b225623cf77285033e7e4e68bac5c1d5490e47d129bb2  # [py2k]
   url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl  # [py3k]
-  sha256: 50e0b1bdcd488dbe39fd9416976e089b2ff4df18d9f1fab47abf4c498209c3fc  # [py3k]
+  sha256: d3559616ccad8d72e7a259bff51be61a9bf1e66e2cebdc782c33e4b588b5e943  # [py3k]
 
 build:
+  noarch: python
   number: {{ build_number }}
   script:
-    - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py2-none-any.whl  # [py2k]
     - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl  # [py3k]
   entry_points:
     - tensorboard = tensorboard.main:run_main
@@ -22,16 +20,19 @@ build:
 requirements:
   # See: https://pypi.org/project/tensorboard
   build:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
     - numpy >=1.12.0
-    - six >=1.10.0
-    - protobuf >=3.4.0
-    - werkzeug >=0.11.10
+    - protobuf >=3.6.0
+    - werkzeug >=0.11.15
     - markdown >=2.6.8
-    - futures >=3.1.1   # [py27]
+    - setuptools >=41.0.0
+    - wheel >=0.26
+    - six >=1.10.0
+    - absl-py >=0.4
+    - grpcio >=1.6.3
 
     #
     # After splitting out of tensorflow, the tensorboard pypi package is problematic:
@@ -79,3 +80,4 @@ extra:
     - gilbertfrancois
     - farhantejani
     - dougalsutherland
+    - roccqqck
