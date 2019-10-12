@@ -11,6 +11,7 @@ source:
 
 build:
   number: {{ build_number }}
+  skip: true  # [py27]
   script:
     - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl  # [py3k]
   entry_points:
@@ -19,10 +20,10 @@ build:
 requirements:
   # See: https://pypi.org/project/tensorboard
   build:
-    - python >=3.5
+    - python
     - pip
   run:
-    - python >=3.5
+    - python
     - numpy >=1.12.0
     - protobuf >=3.6.0
     - werkzeug >=0.11.15
