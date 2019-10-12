@@ -11,7 +11,7 @@ source:
 
 build:
   number: {{ build_number }}
-  skip: True  # [py27]
+  skip: True  # [win or py27]
   script:
     - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl
   entry_points:
