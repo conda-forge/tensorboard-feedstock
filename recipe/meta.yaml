@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl  # [py3k]
-  sha256: d3559616ccad8d72e7a259bff51be61a9bf1e66e2cebdc782c33e4b588b5e943  # [py3k]
+  url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl
+  sha256: d3559616ccad8d72e7a259bff51be61a9bf1e66e2cebdc782c33e4b588b5e943
 
 build:
+  noarch: python
   number: {{ build_number }}
-  skip: true  # [py27]
   script:
-    - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl  # [py3k]
+    - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl
   entry_points:
     - tensorboard = tensorboard.main:run_main
 
 requirements:
   # See: https://pypi.org/project/tensorboard
   build:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - numpy >=1.12.0
     - protobuf >=3.6.0
     - werkzeug >=0.11.15
