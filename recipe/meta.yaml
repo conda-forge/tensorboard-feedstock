@@ -10,7 +10,6 @@ source:
   sha256: d3559616ccad8d72e7a259bff51be61a9bf1e66e2cebdc782c33e4b588b5e943  # [py3k]
 
 build:
-  noarch: python
   number: {{ build_number }}
   script:
     - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl  # [py3k]
