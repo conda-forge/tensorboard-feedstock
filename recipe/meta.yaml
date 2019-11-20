@@ -22,7 +22,6 @@ build:
 
 requirements:
   host:
-    - libarchive !=3.4  # [osx]  # Tempoaray workaround until https://github.com/conda-forge/conda-forge-pinning-feedstock/pull/319 has landed in a conda-forge-pinning release
     - python
     - pip
   run:
