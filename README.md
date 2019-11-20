@@ -214,5 +214,6 @@ Feedstock Maintainers
 * [@dougalsutherland](https://github.com/dougalsutherland/)
 * [@farhantejani](https://github.com/farhantejani/)
 * [@gilbertfrancois](https://github.com/gilbertfrancois/)
+* [@mdraw](https://github.com/mdraw/)
 * [@sdvillal](https://github.com/sdvillal/)
 
