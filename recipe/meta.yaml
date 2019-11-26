@@ -1,4 +1,4 @@
-{% set version = "1.14.0" %}
+{% set version = "2.0.2" %}
 {% set build_number = 0 %}
 
 package:
@@ -7,9 +7,9 @@ package:
 
 source:
   url: https://pypi.io/packages/py2/t/tensorboard/tensorboard-{{ version }}-py2-none-any.whl  # [py2k]
-  sha256: c35ba681a52d4922be6b225623cf77285033e7e4e68bac5c1d5490e47d129bb2  # [py2k]
+  sha256: 32d9dec38d053d7d75796eb7c2e0d77285af35f69ee1a6796ab5ecc896679fb3  # [py2k]
   url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl  # [py3k]
-  sha256: 50e0b1bdcd488dbe39fd9416976e089b2ff4df18d9f1fab47abf4c498209c3fc  # [py3k]
+  sha256: ccae56f01acc78a138474081b631af52017c2075ffe1c453d58c49d5046ef081  # [py3k]
 
 build:
   number: {{ build_number }}
