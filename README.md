@@ -85,13 +85,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_python2.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1994&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tensorboard-feedstock?branchName=master&jobName=win&configuration=win_python2.7" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>win_python3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1994&branchName=master">
@@ -221,5 +214,6 @@ Feedstock Maintainers
 * [@dougalsutherland](https://github.com/dougalsutherland/)
 * [@farhantejani](https://github.com/farhantejani/)
 * [@gilbertfrancois](https://github.com/gilbertfrancois/)
+* [@mdraw](https://github.com/mdraw/)
 * [@sdvillal](https://github.com/sdvillal/)
 
