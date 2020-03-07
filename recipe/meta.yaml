@@ -31,12 +31,14 @@ requirements:
     - markdown >=2.6.8
     - absl-py >=0.4
     - grpcio >=1.24.3
+    - google_auth_oauthlib ==0.4.1
 
 test:
   imports:
     - tensorboard
   commands:
     - tensorboard -h
+    - tensorboard --logdir 
 
 about:
   home: https://github.com/tensorflow/tensorboard
