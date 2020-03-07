@@ -1,40 +1,35 @@
-{% set version = "1.15.0" %}
-{% set build_number = 0 %}
+{% set name = "tensorboard" %}
+{% set version = "2.1.1" %}
 
 package:
-  name: tensorboard
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/py2/t/tensorboard/tensorboard-{{ version }}-py2-none-any.whl  # [py2k]
-  sha256: 612b789386aa1b2c4804e1961273b37f8e4dd97613f98bc90ff0402d24627f50  # [py2k]
-  url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl  # [py3k]
-  sha256: 4cad2c65f6011e51609b463014c014fd7c6ddd9c1263af1d4f18dd97ed88c2bc  # [py3k]
+  url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl
+  sha256: 3a36da59d4e13fb140d04636aaf544f1a38364a7e3609a15cdaf01a5d3073b37
 
 build:
-  number: {{ build_number }}
-  skip: True  # [win and py27]
+  number: 0
   script:
-    - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py2-none-any.whl  # [py2k]
-    - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl  # [py3k]
+    - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl
   entry_points:
     - tensorboard = tensorboard.main:run_main
 
 requirements:
   host:
-    - python
+    - python >=3.2
     - pip
   run:
-    - python
+    - python >=3.2
     - wheel >=0.26
     - numpy >=1.12.0
     - six >=1.10.0
-    - protobuf >=3.4.0
-    - werkzeug >=0.11.10
+    - protobuf >=3.6.0
+    - werkzeug >=0.11.15
     - markdown >=2.6.8
-    - absl-py >=0.8.0
-    - grpcio >=1.6.3
-    - futures >=3.1.1   # [py27]
+    - absl-py >=0.4
+    - grpcio >=1.24.3
 
 test:
   imports:
