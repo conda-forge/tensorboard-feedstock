@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  noarch: true
   script:
     - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl
   entry_points:
