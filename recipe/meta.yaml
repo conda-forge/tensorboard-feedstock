@@ -41,7 +41,7 @@ test:
 
 about:
   home: https://github.com/tensorflow/tensorboard
-  license: Apache 2.0
+  license: Apache-2.0
   license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
   summary: TensorFlow's Visualization Toolkit
 
