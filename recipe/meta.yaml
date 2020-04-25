@@ -1,5 +1,5 @@
 {% set name = "tensorboard" %}
-{% set version = "2.1.1" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl
-  sha256: 3a36da59d4e13fb140d04636aaf544f1a38364a7e3609a15cdaf01a5d3073b37
+  sha256: 9a2a2dc9856187679e93f3c95e5dc771dd47e3257db09767b4be118d734b4dc2
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl
@@ -21,6 +21,7 @@ requirements:
   host:
     - python >=3.2
     - pip
+    - setuptools >=41.0.0
   run:
     - python >=3.2
     - wheel >=0.26
@@ -31,7 +32,10 @@ requirements:
     - markdown >=2.6.8
     - absl-py >=0.4
     - grpcio >=1.24.3
-    - google-auth-oauthlib ==0.4.1
+    - google-auth >=1.6.3,<2
+    - google-auth-oauthlib >=0.4.1,<0.5
+    - requests >=2.21.0,<3
+    - tensorboard-plugin-wit >=1.6.0
 
 test:
   imports:
