@@ -10,8 +10,8 @@ source:
   sha256: 3a36da59d4e13fb140d04636aaf544f1a38364a7e3609a15cdaf01a5d3073b37
 
 build:
-  number: 0
-  noarch: true
+  number: 1
+  noarch: python
   script:
     - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl
   entry_points:
@@ -42,8 +42,8 @@ test:
 about:
   home: https://github.com/tensorflow/tensorboard
   license: Apache 2.0
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
-  summary: "TensorFlow's Visualization Toolkit"
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
+  summary: TensorFlow's Visualization Toolkit
 
 extra:
   recipe-maintainers:
