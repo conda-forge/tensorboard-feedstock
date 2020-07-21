@@ -5,7 +5,7 @@ Home: https://github.com/tensorflow/tensorboard
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: TensorFlow's Visualization Toolkit
 
@@ -118,6 +118,7 @@ Feedstock Maintainers
 
 * [@farhantejani](https://github.com/farhantejani/)
 * [@gilbertfrancois](https://github.com/gilbertfrancois/)
+* [@jschueller](https://github.com/jschueller/)
 * [@mdraw](https://github.com/mdraw/)
 * [@sdvillal](https://github.com/sdvillal/)
 
