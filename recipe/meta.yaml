@@ -1,5 +1,5 @@
 {% set name = "tensorboard" %}
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl
-  sha256: bb6bbc75ad2d8511ba6cbd49e4417276979f49866e11841e83da8298727dbaed
+  sha256: 9a2a2dc9856187679e93f3c95e5dc771dd47e3257db09767b4be118d734b4dc2
 
 build:
   number: 0
