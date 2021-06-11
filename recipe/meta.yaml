@@ -1,5 +1,5 @@
 {% set name = "tensorboard" %}
-{% set version = "2.4.1" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl
-  sha256: 7b8c53c396069b618f6f276ec94fc45d17e3282d668979216e5d30be472115e4
+  sha256: e167460085b6528956b33bab1c970c989cdce47a6616273880733f5e7bde452e
 
 build:
   number: 0
@@ -33,6 +33,7 @@ requirements:
     - grpcio >=1.24.3
     - google-auth-oauthlib ==0.4.1
     - tensorboard-plugin-wit >=1.6.0
+    - tensorboard-data-server >=0.6.0,<0.7.0
 
 test:
   imports:
