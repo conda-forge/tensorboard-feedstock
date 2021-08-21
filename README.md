@@ -120,4 +120,5 @@ Feedstock Maintainers
 * [@jschueller](https://github.com/jschueller/)
 * [@mdraw](https://github.com/mdraw/)
 * [@sdvillal](https://github.com/sdvillal/)
+* [@xhochy](https://github.com/xhochy/)
 
