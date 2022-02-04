@@ -10,7 +10,7 @@ source:
   sha256: 65a338e4424e9079f2604923bdbe301792adce2ace1be68da6b3ddf005170def
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl
@@ -19,10 +19,10 @@ build:
 
 requirements:
   host:
-    - python >=3.2,<3.10
+    - python >=3.2
     - pip
   run:
-    - python >=3.2,<3.10
+    - python >=3.2
     - wheel >=0.26
     - numpy >=1.12.0
     - six >=1.10.0
@@ -61,3 +61,4 @@ extra:
     - mdraw
     - jschueller
     - xhochy
+    - ngam

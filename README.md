@@ -120,6 +120,7 @@ Feedstock Maintainers
 * [@gilbertfrancois](https://github.com/gilbertfrancois/)
 * [@jschueller](https://github.com/jschueller/)
 * [@mdraw](https://github.com/mdraw/)
+* [@ngam](https://github.com/ngam/)
 * [@sdvillal](https://github.com/sdvillal/)
 * [@xhochy](https://github.com/xhochy/)
 
