@@ -151,6 +151,3 @@ Feedstock Maintainers
 * [@sdvillal](https://github.com/sdvillal/)
 * [@xhochy](https://github.com/xhochy/)
 
-
-<!-- dummy commit to enable rerendering -->
-
