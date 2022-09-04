@@ -8,6 +8,11 @@ package:
 source:
   url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl
   sha256: 76c91a5e8959cd2208cc32cb17a0cb002badabb66a06ac2af02a7810f49a59e3
+  patches:
+    # ngam 20220904: pip check fails because protobuf <3.20 upstream
+    # but we want this to coexist with our libprotobuf global pin
+    # which is now at 3.20 and moving to 3.21
+    - patches/protobuf-pin.diff
 
 build:
   number: 1
@@ -45,10 +50,7 @@ test:
     - tensorboard
   commands:
     - tensorboard -h
-    # ngam 20220904: pip check fails because protobuf <3.20 upstream
-    # but we want this to coexist with our libprotobuf global pin
-    # which is now at 3.20 and moving to 3.21
-    # - pip check
+    - pip check
 
 about:
   home: https://github.com/tensorflow/tensorboard
