@@ -26,6 +26,7 @@ requirements:
     - wheel >=0.26
     - numpy >=1.12.0
     - six >=1.10.0
+    - libprotobuf
     - protobuf >=3.9.2
     - werkzeug >=1.0.1
     - markdown >=2.6.8
