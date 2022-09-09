@@ -14,6 +14,8 @@ build:
   noarch: python
   script:
     - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl
+    # Remove the strict protobuf requirement. Conda will manage it.
+    - sed -i 's/^Requires-Dist: protobuf.*/Requires-Dist: protobuf/' ${SP_DIR}/tensorboard-{{ version }}.dist-info/METADATA
   entry_points:
     - tensorboard = tensorboard.main:run_main
 
@@ -45,10 +47,7 @@ test:
     - tensorboard
   commands:
     - tensorboard -h
-    # ngam 20220904: pip check fails because protobuf <3.20 upstream
-    # but we want this to coexist with our libprotobuf global pin
-    # which is now at 3.20 and moving to 3.21
-#     - pip check
+    - pip check
 
 about:
   home: https://github.com/tensorflow/tensorboard
