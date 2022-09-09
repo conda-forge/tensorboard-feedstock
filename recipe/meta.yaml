@@ -10,10 +10,8 @@ source:
   sha256: 76c91a5e8959cd2208cc32cb17a0cb002badabb66a06ac2af02a7810f49a59e3
 
 build:
-  number: 1
+  number: 2
   noarch: python
-  script:
-    - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl
   entry_points:
     - tensorboard = tensorboard.main:run_main
 
@@ -45,10 +43,7 @@ test:
     - tensorboard
   commands:
     - tensorboard -h
-    # ngam 20220904: pip check fails because protobuf <3.20 upstream
-    # but we want this to coexist with our libprotobuf global pin
-    # which is now at 3.20 and moving to 3.21
-#     - pip check
+    - pip check
 
 about:
   home: https://github.com/tensorflow/tensorboard
