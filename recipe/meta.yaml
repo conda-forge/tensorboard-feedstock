@@ -15,7 +15,7 @@ build:
   script:
     - python -m pip install --no-deps --ignore-installed ./tensorboard-{{ version }}-py3-none-any.whl
     # Remove the strict protobuf requirement. Conda will manage it.
-    - sed -i 's/^Requires-Dist: protobuf.*/Requires-Dist: protobuf/' ${SP_DIR}/tensorboard-{{ version }}.dist-info/METADATA
+    - sed -i "s/^Requires-Dist: protobuf.*/Requires-Dist: protobuf/" ${SP_DIR}/tensorboard-{{ version }}.dist-info/METADATA
   entry_points:
     - tensorboard = tensorboard.main:run_main
 
