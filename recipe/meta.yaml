@@ -30,7 +30,7 @@ requirements:
     - absl-py >=0.4
     - grpcio >=1.48.2
     - google-auth >=1.6.3,<3
-    - google-auth-oauthlib >=0.4.1,<0.5
+    - google-auth-oauthlib >=0.5,<1.1
     - requests >=2.21.0,<3
     - setuptools >=41.0.0
     - tensorboard-plugin-wit >=1.6.0
