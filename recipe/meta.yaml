@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - wheel >=0.26
+    - six >=1.9
     - numpy >=1.12.0
     - protobuf >=3.19.6
     - werkzeug >=1.0.1
