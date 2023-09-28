@@ -1,5 +1,5 @@
 {% set name = "tensorboard" %}
-{% set version = "2.14.0" %}
+{% set version = "2.14.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl
-  sha256: 3667f9745d99280836ad673022362c840f60ed8fefd5a3e30bf071f5a8fd0017
+  sha256: 3db108fb58f023b6439880e177743c5f1e703e9eeb5fb7d597871f949f85fd58
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - wheel >=0.26
+    - six >=1.9
     - numpy >=1.12.0
     - protobuf >=3.19.6
     - werkzeug >=1.0.1
