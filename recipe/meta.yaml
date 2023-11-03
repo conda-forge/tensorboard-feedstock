@@ -23,7 +23,7 @@ requirements:
     - python >=3.8
     - six >=1.9
     - numpy >=1.12.0
-    - protobuf >=3.19.6,<4.24
+    - protobuf >=3.19.6
     - werkzeug >=1.0.1
     - markdown >=2.6.8
     - absl-py >=0.4
