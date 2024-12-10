@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl
+  url: https://pypi.org/packages/py3/t/tensorboard/tensorboard-{{ version }}-py3-none-any.whl
   sha256: 107ca4821745f73e2aefa02c50ff70a9b694f39f790b11e6f682f7d326745eab
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - tensorboard = tensorboard.main:run_main
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - absl-py >=0.4
     - grpcio >=1.48.2
     - markdown >=2.6.8
@@ -35,6 +35,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - tensorboard
   commands:
