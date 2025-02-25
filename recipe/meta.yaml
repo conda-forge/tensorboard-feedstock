@@ -57,3 +57,4 @@ extra:
     - jschueller
     - xhochy
     - ngam
+    - conda-forge/tensorflow
