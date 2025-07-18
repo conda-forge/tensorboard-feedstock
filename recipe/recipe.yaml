@@ -1,0 +1,67 @@
+schema_version: 1
+
+context:
+  name: tensorboard
+  version: 2.20.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/py3/t/tensorboard/tensorboard-${{ version }}-py3-none-any.whl
+  sha256: 9dc9f978cb84c0723acf9a345d96c184f0293d18f166bb8d59ee098e6cfaaba6
+
+build:
+  number: 0
+  noarch: python
+  python:
+    entry_points:
+      - tensorboard = tensorboard.main:run_main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - sed
+  run:
+    - python >=${{ python_min }}
+    - absl-py >=0.4
+    - grpcio >=1.48.2
+    - markdown >=2.6.8
+    - numpy >=1.12.0
+    - packaging
+    - pillow
+    - protobuf >=3.19.6,!=4.24.0
+    - werkzeug >=1.0.1
+    - setuptools >=41.0.0
+    - tensorboard-data-server >=0.7.0,<0.8.0
+
+tests:
+  - python:
+      imports:
+        - tensorboard
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - tensorboard -h
+      - pip check
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: TensorFlow's Visualization Toolkit
+  homepage: https://github.com/tensorflow/tensorboard
+
+extra:
+  recipe-maintainers:
+    - sdvillal
+    - gilbertfrancois
+    - farhantejani
+    - mdraw
+    - jschueller
+    - xhochy
+    - ngam
+    - conda-forge/tensorflow
