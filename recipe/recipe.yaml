@@ -23,6 +23,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
+    - sed
   run:
     - python >=${{ python_min }}
     - absl-py >=0.4
