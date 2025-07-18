@@ -143,6 +143,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@conda-forge/tensorflow](https://github.com/orgs/conda-forge/teams/tensorflow/)
 * [@farhantejani](https://github.com/farhantejani/)
 * [@gilbertfrancois](https://github.com/gilbertfrancois/)
 * [@jschueller](https://github.com/jschueller/)
