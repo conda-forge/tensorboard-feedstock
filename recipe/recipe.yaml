@@ -13,7 +13,7 @@ source:
   sha256: 9dc9f978cb84c0723acf9a345d96c184f0293d18f166bb8d59ee098e6cfaaba6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   python:
     entry_points:
@@ -48,6 +48,12 @@ tests:
     script:
       - tensorboard -h
       - pip check
+      # Guard against version-mismatch regressions: the package must report ${{ version }}
+      - tensorboard --version_tb
+      - python -c "import tensorboard.version as v; print('tensorboard.version.VERSION =', v.VERSION); assert v.VERSION == '${{ version }}', v.VERSION"
+      - python -c "from importlib.metadata import version; print('importlib.metadata version =', version('tensorboard')); assert version('tensorboard') == '${{ version }}', version('tensorboard')"
+      # Guard that the package advertises a conda install, not pip/pypi
+      - python -c "from importlib.metadata import distribution as d; t = (d('tensorboard').read_text('INSTALLER') or '').strip(); print('INSTALLER =', repr(t)); assert t == 'conda', t"
 
 about:
   license: Apache-2.0
