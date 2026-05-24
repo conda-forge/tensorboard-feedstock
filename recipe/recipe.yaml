@@ -48,6 +48,7 @@ tests:
     script:
       - tensorboard -h
       - pip check
+      - pip list | grep tensorboard
       # Guard against version-mismatch regressions: the package must report ${{ version }}
       - tensorboard --version_tb
       - python -c "import tensorboard.version as v; print('tensorboard.version.VERSION =', v.VERSION); assert v.VERSION == '${{ version }}', v.VERSION"
