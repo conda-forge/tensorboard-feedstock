@@ -2,18 +2,19 @@ schema_version: 1
 
 context:
   name: tensorboard
-  version: 2.20.0
+  version: "2.21.0"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
+  # source distribution not available on PyPI; git luse wheel instead:
   url: https://pypi.org/packages/py3/t/tensorboard/tensorboard-${{ version }}-py3-none-any.whl
-  sha256: 9dc9f978cb84c0723acf9a345d96c184f0293d18f166bb8d59ee098e6cfaaba6
+  sha256: 7279316dcb6bd5bc391d623dea841531299cde1887310e8133bc34a996d32255
 
 build:
-  number: 1
+  number: 0
   noarch: python
   python:
     entry_points:
@@ -23,16 +24,17 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
+    - setuptools
     - sed
   run:
     - python >=${{ python_min }}
     - absl-py >=0.4
-    - grpcio >=1.48.2
+    - grpcio >=1.74.0,<2
     - markdown >=2.6.8
     - numpy >=1.12.0
     - packaging
     - pillow
-    - protobuf >=3.19.6,!=4.24.0
+    - protobuf >=6.31.1,<8.0.0
     - werkzeug >=1.0.1
     - setuptools >=41.0.0
     - tensorboard-data-server >=0.7.0,<0.8.0
